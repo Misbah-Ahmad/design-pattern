@@ -1,12 +1,16 @@
 package observer.exercise;
 
 public class Stock {
-    private String symbol;
+    private int id;
     private float price;
 
-    public Stock(String symbol, float price) {
-        this.symbol = symbol;
+    public Stock(int id, float price) {
+        this.id = id;
         this.price = price;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public float getPrice() {
@@ -20,7 +24,7 @@ public class Stock {
     @Override
     public String toString() {
         return "Stock{" +
-                "symbol='" + symbol + '\'' +
+                "symbol='" + id + '\'' +
                 ", price=" + price +
                 '}';
     }
